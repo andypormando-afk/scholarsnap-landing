@@ -1,31 +1,66 @@
-# ScholarSnap Landing Page — Pre-Launch
+# ScholarSnap Landing Page — Pitch Deck v3 Edition
 
-Situs statis bahasa Indonesia untuk memperkenalkan ScholarSnap dan memberikan URL publik pada formulir pendaftaran NextDev. Tidak memakai server, database, API key, atau dependensi eksternal.
+Landing page statis yang dirancang ulang berdasarkan **ScholarSnap_Slides_Combined_Layout_Upgrade v3.pptx**, untuk presentasi produk dan konteks pendaftaran Telkomsel NextDev 12.
 
-## Melihat di komputer
+## Yang diperbarui
 
-Buka `index.html` dengan browser. Untuk pengujian lokal dengan Python (opsional): `python -m http.server 8000` lalu buka `http://localhost:8000`.
+- Desain putih/navy/ungu mengikuti pitch deck; headline dan narasi mengadopsi slide 2–3.
+- Karakter **Jord** dan **Louisa** digunakan dari gambar pada **slide 4**, tanpa mengubah isi gambarnya.
+- Visual **Topic Study, Video Tutorial, ilustrasi** dari slide 8.
+- Visual **pengaturan, pengerjaan, review Latihan Soal** dari slide 10.
+- Visual **chat Jord** dari slide 12 dan **AISD** dari slide 14.
+- Target dampak sosial dan usulan sinergi NextDev mengikuti slide 17 dan 19, dengan pengungkapan status yang jelas.
+- Angka `>1.400 topik` dan `>130 ribu soal` berasal dari pitch deck; bukan angka pengguna atau pengukuran independen.
 
-## Publikasi cepat dengan GitHub Pages
+> Catatan: Data PISA 2025 **tidak dimasukkan**, untuk menghindari mengutip statistik yang belum dapat diverifikasi. Gambar tetap menggunakan aset berkas presentasi, bukan hasil generasi ulang.
 
-1. Buat **repository publik BARU** bernama misalnya `scholarsnap-landing` (jangan memakai repo kode aplikasi atau mengunggah rahasia).
-2. Unggah hanya `index.html` dan `favicon.svg` ke root repository tersebut.
-3. Masuk **Settings → Pages** dan pada **Build and deployment** pilih **Deploy from a branch** → `main` → `/ (root)` → Save.
-4. Buka URL `https://NAMA-USER.github.io/scholarsnap-landing/` setelah halaman aktif. Ganti `NAMA-USER` dengan username GitHub sebenarnya; URL ini contoh, bukan URL yang sudah dibuat.
-5. Periksa tampilan melalui mode incognito sebelum memasukkan URL pada formulir.
+## Cara memublikasikan di GitHub Pages
 
-Tidak perlu GitHub Actions manual. GitHub Pages dapat menggunakan mekanisme deployment otomatis milik GitHub; jika larangan Anda mencakup seluruh eksekusi Actions, gunakan Vercel atau Netlify sebagai alternatif.
+1. Buka `https://github.com/andypormando-afk/scholarsnap-landing`.
+2. Klik `Add file` → `Upload files`.
+3. Unggah **`index.html`** dan **seluruh folder `assets/` beserta file PNG di dalamnya**. Pastikan struktur URL file menjadi `assets/cover.png`, `assets/jord.png`, dan seterusnya.
+4. Jika GitHub meminta konfirmasi penggantian `index.html`, lakukan melalui pengeditan file atau commit dari Git pada PC. Hindari menambahkan `index (1).html`—nama harus persis `index.html`.
+5. Setelah commit, akses `https://andypormando-afk.github.io/scholarsnap-landing/` untuk memeriksa tampilan. Coba browser tanpa login dan ukuran mobile.
 
-## Alternatif Vercel / Netlify
+### Alternatif praktis untuk Windows (opsional)
 
-Buat proyek static site dan unggah folder ini (atau sambungkan repository landing page saja). Dapatkan URL HTTPS dari dashboard dan periksa apakah dapat dibuka tanpa login.
+Di folder hasil ekstraksi, ada `publish-to-github.ps1`. Jika Git for Windows sudah terpasang, jalankan dari PowerShell pada folder tersebut:
 
-## Sebelum dikirim ke NextDev
+```powershell
+.\publish-to-github.ps1
+```
 
-- Ganti ikon `S` dengan logo ScholarSnap asli bila sudah tersedia.
-- Ganti mockup percakapan di hero dengan screenshot aplikasi asli, jika sudah siap. Saat ini diberi keterangan sebagai **ilustrasi konsep**, bukan bukti produk aktual.
-- Tinjau ulang semua fitur menurut status pengujian terkini.
-- Tambahkan tautan demo yang benar-benar dapat diakses jika sudah tersedia, tanpa membocorkan kredensial produksi.
-- Jangan unggah file `.env`, service role keys, atau private source code.
+Skrip akan membuat clone baru di folder TEMP, memperlihatkan ringkasan file yang akan diganti, lalu meminta Anda **mengetik `PUBLISH`** sebelum commit/push. Skrip tidak menyentuh repository aplikasi utama dan tidak menjalankan GitHub Actions. Jika PowerShell menolak skrip karena execution policy, gunakan metode upload lewat web GitHub atau jalankan langkah git manual, bukan mengubah kebijakan keamanan sistem secara permanen.
 
-Situs tidak mengklaim jumlah pengguna, penghasilan, atau status peluncuran publik.
+### Metode git manual
+
+Ekstrak zip, salin `index.html` dan `assets/` ke clone lokal repository, jalankan `git add index.html assets`, `git commit` dan `git push origin main`.
+
+
+## Kebijakan keamanan dan keakuratan
+
+- Semua kode adalah HTML/CSS statis; tidak ada database, API key, atau koneksi ke backend.
+- Tidak memasukkan nama pengguna, statistik retensi, pendapatan, atau hasil pilot yang belum dibuktikan.
+- Visual berasal dari pitch deck. Beberapa adalah ilustrasi konsep, bukan bukti bahwa semua fitur telah dirilis.
+- Jangan unggah `.env`, kunci service role, atau source code aplikasi pribadi.
+
+## Struktur
+
+```
+index.html
+README.md
+publish-to-github.ps1
+assets/
+  cover.png
+  jord.png
+  louisa.png
+  study-topic.png
+  video-tutorial.png
+  illustration.png
+  practice-config.png
+  practice-question.png
+  practice-review.png
+  jord-chat.png
+  aisd-illustration.png
+  social-vision.png
+```
