@@ -27,6 +27,28 @@
     @media(max-width:760px){.wrap{width:calc(100% - 34px)}section{padding:68px 0}.nav{min-height:68px}.navbadge{display:none}.navlinks .button{font-size:.8rem;min-height:38px;padding:8px 11px}.hero{padding:60px 0}.hero-grid,.proof,.proof.reverse,.jord-flow,.aisd,.impact,.nextdev-grid{grid-template-columns:1fr;gap:32px}.hero-visual{max-width:610px}.ribbon-row{grid-template-columns:1fr 1fr;gap:17px}.ribbon-row>p{grid-column:1/-1}.ribbon .metric:nth-child(2){border-left:none;padding-left:0}.problem-grid,.roles,.tryout-grid{grid-template-columns:1fr}.section-head{margin-bottom:29px}.roles{gap:14px}.role-card{grid-template-columns:120px 1fr;min-height:0}.portrait img{height:225px}.proof.reverse .media-stage{order:2}.jord-flow .phone-demo{max-width:300px}.aisd-steps{grid-template-columns:repeat(2,1fr)}.footer-grid{flex-direction:column;align-items:flex-start}h1{font-size:clamp(2.5rem,10vw,4rem)}}
     @media(max-width:430px){.navlinks .button{padding:7px 10px;font-size:.72rem}.wordmark{font-size:1.32rem}.role-card{grid-template-columns:99px 1fr;padding:13px;gap:11px}.role-card h3{font-size:1.35rem}.role-card p{font-size:.84rem}.role-card .role-text{padding:4px 0}.portrait img{height:200px}.exam ul{grid-template-columns:1fr}.aisd-steps{grid-template-columns:1fr 1fr}.aisd-step{padding:12px}.aisd-step p{font-size:.72rem}.triptych{gap:5px}.triptych .screenshot{padding:3px}.shot-wrap span{font-size:.65rem}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+  
+    /* Video showcase — preserves all existing pitch-deck assets and branding. */
+    .video-showcase{padding:82px 0;background:linear-gradient(160deg,#100f35,#1b1850);color:#fff}
+    .video-showcase .tag{color:#c6bcff}
+    .video-showcase h2{color:#fff}
+    .video-showcase .showcase-intro{max-width:760px;color:#d7d2f2}
+    .video-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-top:32px}
+    .video-demo-card{overflow:hidden;border-radius:22px;border:1px solid rgba(255,255,255,.18);background:#252151;box-shadow:0 14px 35px rgba(0,0,0,.15)}
+    .video-demo-media{aspect-ratio:16/9;position:relative;background:#15123b;display:grid;place-items:center;overflow:hidden}
+    .video-demo-media video{width:100%;height:100%;display:none;object-fit:contain;background:#090919}
+    .video-demo-media.ready video{display:block}
+    .video-demo-media.ready .video-demo-pending{display:none}
+    .video-demo-pending{position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:22px;background:linear-gradient(0deg,rgba(14,11,46,.96),rgba(14,11,46,.56)),var(--video-image) center/cover no-repeat}
+    .video-demo-pending strong{display:block;font-size:1rem;line-height:1.4}
+    .video-demo-pending small{display:block;margin-top:10px;max-width:340px;color:#dedaf6}
+    .video-demo-meta{padding:20px 23px 24px}
+    .video-demo-lang{font-size:.75rem;letter-spacing:.1em;color:#c3b4ff;text-transform:uppercase;font-weight:800}
+    .video-demo-meta h3{margin:9px 0 9px;font-size:1.37rem;color:white}
+    .video-demo-meta p{color:#e2def5;margin:0;font-size:.94rem}
+    .video-disclaimer{margin:18px 0 0;color:#c8c2e6;font-size:.86rem}
+    @media(max-width:720px){.video-showcase{padding:55px 0}.video-grid{grid-template-columns:1fr}.video-demo-meta{padding:18px}}
+
   </style>
 </head>
 <body>
@@ -44,6 +66,32 @@
     <section id="pendekatan"><div class="wrap"><div class="section-head"><p class="tag">The education dilemma</p><h2>Satu alur belajar yang lebih terarah.</h2><p>AI mengubah cara belajar dan bekerja. Siswa tetap membutuhkan fondasi pengetahuan yang kuat, dukungan saat belajar mandiri, dan pengalaman yang mampu menyesuaikan kebutuhan mereka.</p></div><div class="problem-grid"><article class="tile"><div class="num">01 / AKSES</div><h3>Pengajaran berkualitas</h3><p>Akses dan kualitas pengajaran tidak selalu merata antarwilayah dan kondisi pelajar.</p></article><article class="tile"><div class="num">02 / ARAH</div><h3>Belajar mandiri</h3><p>Siswa perlu arahan tentang dari mana mulai, apa yang perlu dipelajari, dan kapan berlatih.</p></article><article class="tile"><div class="num">03 / PERSONALISASI</div><h3>Setiap siswa berbeda</h3><p>Penjelasan, ritme, dan latihan perlu membantu siswa belajar sesuai konteks dan kebutuhannya.</p></article></div></div></section>
     <section id="jord-louisa" class="dark"><div class="wrap"><div class="section-head center"><p class="tag">Pendamping belajar</p><h2>Jord &amp; Louisa.<br>Dua peran, satu tujuan.</h2><p>Tutor akademik dan teman belajar yang saling melengkapi, seperti dijelaskan dalam pitch deck.</p></div><div class="roles"><article class="role-card"><div class="portrait"><img src="assets/jord.png" width="165" height="333" alt="Karakter Jord asli dari pitch deck ScholarSnap" loading="lazy"></div><div class="role-text"><span class="mini-label">AI Tutor</span><h3>Jord</h3><p>Membimbing siswa memahami konsep, menjawab pertanyaan pelajaran, dan mengarahkan latihan hingga lebih paham.</p><div class="last">Mengarahkan · Menjelaskan · Melatih</div></div></article><article class="role-card"><div class="portrait"><img src="assets/louisa.png" width="157" height="339" alt="Karakter Louisa asli dari pitch deck ScholarSnap" loading="lazy"></div><div class="role-text"><span class="mini-label">AI Companion</span><h3>Louisa</h3><p>Menemani proses belajar, mendukung motivasi, dan membantu siswa menikmati perjalanan belajar. Pertanyaan akademik diarahkan ke Jord.</p><div class="last">Mendampingi · Memotivasi · Mengarahkan</div></div></article></div><p class="roles-note">Rencana pilihan AI Companion tambahan dan belajar bersama teman belum diluncurkan.</p></div></section>
     <section id="produk"><div class="wrap"><div class="section-head"><p class="tag">Fondasi akademik</p><h2>Dari memahami materi hingga menguji kesiapan.</h2><p>Empat area utama ScholarSnap: Materi Topik Belajar, Latihan Soal, Try-Out, dan AI Software Developer. Berikut visual yang sudah tersedia dalam pitch deck.</p></div><div class="proof"><div class="proof-copy"><span class="mini-label">01 / Materi Topik Belajar</span><h2>Materi, video, dan ilustrasi dalam satu pengalaman.</h2><p>Alur topik membantu siswa mengikuti materi secara bertahap dan meminta bantuan Jord jika ada konsep yang belum jelas.</p><ul class="bulletlist"><li>Gambaran umum, rumus atau aturan, dan contoh pembahasan</li><li>Kesalahan umum, 5 Must Knows, serta latihan terkait</li><li>Video Tutorial tersedia untuk topik tertentu</li><li>Penjelasan dua bahasa pada materi yang sesuai</li></ul></div><div class="media-stage"><div class="media-combo"><div class="screenshot"><img src="assets/study-topic.png" width="446" height="782" alt="Tampilan topik belajar dari pitch deck ScholarSnap" loading="lazy"></div><div class="screenshot"><img src="assets/video-tutorial.png" width="797" height="446" alt="Visual video tutorial dari pitch deck ScholarSnap" loading="lazy"></div><div class="screenshot"><img src="assets/illustration.png" width="392" height="247" alt="Ilustrasi materi grafik matematika dari pitch deck ScholarSnap" loading="lazy"></div></div><p class="imgcaption">Aset diambil langsung dari slide 8 pitch deck, tanpa mengganti atau membuat ulang gambar.</p></div></div></div></section>
+
+    <!-- Original ScholarSnap video files appear here only when explicitly exported for public sharing.
+         No private Supabase bucket, access token, or database credentials are exposed. -->
+    <section class="video-showcase" id="video-demo" aria-labelledby="video-demo-title"><div class="wrap">
+      <p class="tag">Contoh Video Tutorial ScholarSnap</p>
+      <h2 id="video-demo-title">Dua video tutorial dalam Bahasa Inggris.</h2>
+      <p class="showcase-intro">Dua contoh tutorial dari katalog asli ScholarSnap: Chemistry dan Additional Mathematics untuk Singapore Secondary 4. Video dapat diputar setelah salinan MP4 yang lolos pemeriksaan dipublikasikan.</p>
+      <div class="video-grid">
+        <article class="video-demo-card">
+          <div class="video-demo-media" data-video-path="assets/videos/chemistry-en.mp4" style="--video-image:url('assets/video-tutorial.png')">
+            <div class="video-demo-pending" role="status"><div><strong>Video Kimia belum dipublikasikan</strong><small>Materi original tersimpan di penyimpanan privat ScholarSnap; belum tersedia untuk penonton umum.</small></div></div>
+            <video controls playsinline preload="none" poster="assets/video-tutorial.png" aria-label="Tutorial Chemistry in English"></video>
+          </div>
+          <div class="video-demo-meta"><div class="video-demo-lang">English · Chemistry · Singapore Secondary 4</div><h3>Acids, Bases, Salts and Neutralisation</h3><p>Contoh visual pembelajaran Kimia berbahasa Inggris dari katalog ScholarSnap.</p></div>
+        </article>
+        <article class="video-demo-card">
+          <div class="video-demo-media" data-video-path="assets/videos/amath-en.mp4" style="--video-image:url('assets/study-topic.png')">
+            <div class="video-demo-pending" role="status"><div><strong>Video A-Math belum dipublikasikan</strong><small>Materi asli tersimpan di Supabase Storage privat; salinan untuk landing page belum diunggah.</small></div></div>
+            <video controls playsinline preload="none" poster="assets/study-topic.png" aria-label="Additional Mathematics tutorial in English: Quadratic Discriminant and Nature of Roots"></video>
+          </div>
+          <div class="video-demo-meta"><div class="video-demo-lang">English · Additional Mathematics · Singapore Secondary 4</div><h3>Quadratic Discriminant and Nature of Roots</h3><p>Sepuluh adegan pengajaran asli A-Math, membahas diskriminan dan sifat akar persamaan kuadrat.</p></div>
+        </article>
+      </div>
+      <p class="video-disclaimer">Video demo akan memutar kompilasi 10 adegan pembelajaran per topik, tanpa segmen kuis serta jawaban bercabang. File asli harus diverifikasi dan diizinkan untuk publikasi. Ketersediaan video dalam aplikasi mengikuti tahapan pengujian.</p>
+    </div></section>
+
     <section class="soft"><div class="wrap"><div class="proof reverse"><div class="media-stage"><div class="triptych"><div class="shot-wrap"><div class="screenshot"><img src="assets/practice-config.png" width="423" height="667" alt="Pengaturan latihan soal dari pitch deck" loading="lazy"></div><span>Atur latihan</span></div><div class="shot-wrap"><div class="screenshot"><img src="assets/practice-question.png" width="447" height="710" alt="Pengerjaan soal dari pitch deck" loading="lazy"></div><span>Kerjakan soal</span></div><div class="shot-wrap"><div class="screenshot"><img src="assets/practice-review.png" width="295" height="433" alt="Visual pelajar meninjau pembahasan soal dari pitch deck" loading="lazy"></div><span>Tinjau hasil</span></div></div><p class="imgcaption">Visual sesuai materi slide 10; tampilan dan ketersediaan mengikuti status pengembangan.</p></div><div class="proof-copy"><span class="mini-label">02 / Latihan Soal</span><h2>Berlatih dengan pembahasan yang membantu.</h2><p>Latihan disusun menurut kurikulum, jenjang, mata pelajaran, dan topik. Hasil latihan membantu siswa melihat bagian yang perlu dipahami kembali.</p><ul class="bulletlist"><li>Pilihan ganda, esai, logika, dan kombinasi</li><li>Koreksi, penjelasan, dan evaluasi setelah latihan</li><li>Jord dapat membantu menjelaskan konsep yang belum dipahami</li><li>Konten mengacu pada kurikulum, silabus, dan referensi past paper</li></ul></div></div></div></section>
     <section><div class="wrap"><div class="section-head"><p class="tag">03 / Try-Out</p><h2>Simulasi untuk tujuan ujian yang berbeda.</h2><p>Pilih negara dan jenis ujian, kemudian kerjakan latihan atau simulasi menurut mode yang tersedia.</p></div><div class="tryout-grid"><article class="exam"><h3><span class="flag" aria-hidden="true">🇮🇩</span>Indonesia</h3><ul><li><strong>Ujian Sekolah</strong><small>Berdasarkan mata pelajaran</small></li><li><strong>SEAMO</strong><small>Olimpiade matematika</small></li><li><strong>Tes Beasiswa*</strong><small>Kategori dalam pengembangan</small></li><li><strong>UTBK–SNBT</strong><small>Latihan dan simulasi ujian</small></li></ul></article><article class="exam"><h3><span class="flag" aria-hidden="true">🇸🇬</span>Singapura</h3><ul><li><strong>School Exams</strong><small>Latihan ujian sekolah</small></li><li><strong>SMO</strong><small>Singapore Mathematical Olympiad</small></li><li><strong>Scholarship Test</strong><small>English, Mathematics, Logic, dan lainnya</small></li><li><strong>Mode terarah</strong><small>Format bergantung template ujian</small></li></ul></article></div><div class="mode-row"><span class="mode">Practice</span><span class="mode">Mini Mock</span><span class="mode">Full Mock</span><span class="mode">Olympiad / Challenge</span></div><p class="tiny-note">*Tes Beasiswa Indonesia masih dikembangkan. Soal latihan bukan soal resmi penyelenggara; jenis mode dan timer mengikuti template.</p></div></section>
     <section class="soft"><div class="wrap"><div class="jord-flow"><div><p class="tag">AI Tutor Jord</p><h2>Jawaban dengan konteks belajar siswa.</h2><p style="color:var(--muted)">Menurut rancangan dalam pitch deck, Jord mengutamakan rujukan ScholarSnap dan mengikuti batasan izin serta pengujian kualitas sebelum menggunakan layanan AI tambahan bila diperlukan.</p><ol class="flowlist"><li><span class="circle">01</span><div><strong>Siswa bertanya</strong><p>Meminta penjelasan atau bantuan memahami materi.</p></div></li><li><span class="circle">02</span><div><strong>Jord membaca konteks</strong><p>Memahami topik, bahasa, dan konteks yang diizinkan.</p></div></li><li><span class="circle">03</span><div><strong>Rujukan dipilih</strong><p>Menggunakan materi dan bank soal ScholarSnap yang relevan.</p></div></li><li><span class="circle">04</span><div><strong>Jord menjelaskan</strong><p>Memberikan penjelasan dan langkah belajar berikutnya.</p></div></li></ol></div><figure class="phone-demo"><img src="assets/jord-chat.png" width="438" height="873" alt="Tampilan percakapan Jord dalam pitch deck ScholarSnap" loading="lazy"><figcaption>Visual percakapan dari slide 12</figcaption></figure></div></div></section>
@@ -53,5 +101,23 @@
     <section class="cta"><div class="wrap"><p class="tag" style="color:#b1a2ff">ScholarSnap</p><h2>From Learning Today<br>to Creating Tomorrow.</h2><p>Belajar bukan sekadar memperoleh jawaban yang benar. Tujuannya adalah memahami, percaya diri, dan menggunakan pengetahuan untuk menciptakan solusi.</p><a class="button light" href="#produk">Jelajahi pengalaman produk ↗</a><a class="button ghost" href="#beranda">Kembali ke atas ↑</a></div></section>
   </main>
   <footer class="footer"><div class="wrap footer-grid"><a href="#beranda" class="wordmark">Scholar<span>Snap</span></a><p>© 2026 ScholarSnap · From Learning Today to Creating Tomorrow</p><p>Indonesia &amp; Singapura · Pre-launch</p></div></footer>
+
+  <script>
+    // Progressive enhancement: do not show an unusable player or access private storage.
+    for (const slot of document.querySelectorAll('[data-video-path]')) {
+      const path = slot.getAttribute('data-video-path');
+      fetch(path, { method: 'HEAD', cache: 'no-store' })
+        .then(response => {
+          if (!response.ok || !(response.headers.get('content-type') || '').includes('video/')) return;
+          const player = slot.querySelector('video');
+          const source = document.createElement('source');
+          source.src = path;
+          source.type = 'video/mp4';
+          player.appendChild(source);
+          slot.classList.add('ready');
+        })
+        .catch(() => {});
+    }
+  </script>
 </body>
 </html>
