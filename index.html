@@ -36,16 +36,13 @@
     .video-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-top:32px}
     .video-demo-card{overflow:hidden;border-radius:22px;border:1px solid rgba(255,255,255,.18);background:#252151;box-shadow:0 14px 35px rgba(0,0,0,.15)}
     .video-demo-media{aspect-ratio:16/9;position:relative;background:#15123b;display:grid;place-items:center;overflow:hidden}
-    .video-demo-media video{width:100%;height:100%;display:none;object-fit:contain;background:#090919}
-    .video-demo-media.ready video{display:block}
-    .video-demo-media.ready .video-demo-pending{display:none}
-    .video-demo-pending{position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:22px;background:linear-gradient(0deg,rgba(14,11,46,.96),rgba(14,11,46,.56)),var(--video-image) center/cover no-repeat}
-    .video-demo-pending strong{display:block;font-size:1rem;line-height:1.4}
-    .video-demo-pending small{display:block;margin-top:10px;max-width:340px;color:#dedaf6}
+    .video-demo-media video{width:100%;height:100%;display:block;object-fit:contain;background:#090919}
     .video-demo-meta{padding:20px 23px 24px}
     .video-demo-lang{font-size:.75rem;letter-spacing:.1em;color:#c3b4ff;text-transform:uppercase;font-weight:800}
     .video-demo-meta h3{margin:9px 0 9px;font-size:1.37rem;color:white}
     .video-demo-meta p{color:#e2def5;margin:0;font-size:.94rem}
+    .video-demo-link{display:inline-flex;align-items:center;gap:8px;padding:11px 16px;margin-top:16px;border-radius:12px;font-size:.93rem;font-weight:800;color:#fff;background:#6e58d8;text-decoration:none}
+    .video-demo-link:hover,.video-demo-link:focus-visible{background:#8771ef;text-decoration:underline;outline-offset:3px}
     .video-disclaimer{margin:18px 0 0;color:#c8c2e6;font-size:.86rem}
     @media(max-width:720px){.video-showcase{padding:55px 0}.video-grid{grid-template-columns:1fr}.video-demo-meta{padding:18px}}
 
@@ -55,11 +52,11 @@
   <a class="skip" href="#beranda">Lewati navigasi</a>
   <header class="top"><div class="wrap nav">
     <a href="#beranda" class="wordmark" aria-label="ScholarSnap beranda">Scholar<span>Snap</span></a>
-    <nav class="navlinks" aria-label="Navigasi"><a href="#pendekatan">Pendekatan</a><a href="#jord-louisa">Jord &amp; Louisa</a><a href="#produk">Produk</a><a href="#aisd">AISD</a><span class="navbadge">Pre-launch</span><a class="button" href="#produk">Jelajahi produk ↗</a></nav>
+    <nav class="navlinks" aria-label="Navigasi"><a href="#pendekatan">Pendekatan</a><a href="#jord-louisa">Jord &amp; Louisa</a><a href="#produk">Produk</a><a href="#video-demo">Video Tutorial</a><a href="#aisd">AISD</a><span class="navbadge">Pre-launch</span><a class="button" href="#produk">Jelajahi produk ↗</a></nav>
   </div></header>
   <main id="beranda">
     <section class="hero"><div class="wrap hero-grid">
-      <div><span class="tag">AI-powered learning · Indonesia &amp; Singapura</span><h1>Belajar tetap penting.<br><span class="accent">Caranya perlu lebih relevan.</span></h1><p class="lead">ScholarSnap menghubungkan materi, latihan, evaluasi, serta pendampingan AI dalam satu perjalanan belajar—dari memahami konsep hingga berani menciptakan solusi.</p><p style="font-weight:850;color:#363059;letter-spacing:-.025em">From Learning Today to Creating Tomorrow</p><div class="hero-actions"><a class="button" href="#produk">Lihat pengalaman belajar ↗</a><a class="button outline" href="#aisd">Kenali AISD</a></div><p class="hero-foot"><span class="status-dot"></span>Produk sedang dalam pengembangan, pengujian, dan validasi. Belum diluncurkan untuk publik.</p></div>
+      <div><span class="tag">AI-powered learning · Indonesia &amp; Singapura</span><h1>Belajar tetap penting.<br><span class="accent">Caranya perlu lebih relevan.</span></h1><p class="lead">ScholarSnap menghubungkan materi, latihan, evaluasi, serta pendampingan AI dalam satu perjalanan belajar—dari memahami konsep hingga berani menciptakan solusi.</p><p style="font-weight:850;color:#363059;letter-spacing:-.025em">From Learning Today to Creating Tomorrow</p><div class="hero-actions"><a class="button" href="#produk">Lihat pengalaman belajar ↗</a><a class="button outline" href="#video-demo">▶ Tonton Video Tutorial</a><a class="button outline" href="#aisd">Kenali AISD</a></div><p class="hero-foot"><span class="status-dot"></span>Produk sedang dalam pengembangan, pengujian, dan validasi. Belum diluncurkan untuk publik.</p></div>
       <div class="hero-visual"><img src="assets/cover.png" width="1672" height="941" alt="Visual sampul asli Pitch Deck ScholarSnap untuk Telkomsel NextDev 12" fetchpriority="high"><span class="media-caption">Visual asli dari Pitch Deck ScholarSnap v3</span></div>
     </div></section>
     <div class="ribbon"><div class="wrap ribbon-row"><p><strong style="color:white">Fondasi konten akademik</strong><br>Angka katalog dari pitch deck internal (topik: snapshot 17 Okt 2026), bukan jumlah pengguna atau capaian pembelajaran.</p><div class="metric"><strong>&gt;1.400</strong><small>Topik aktif berbahasa Indonesia &amp; Inggris*</small></div><div class="metric"><strong>&gt;130 ribu</strong><small>Soal dalam katalog berbagai format*</small></div></div></div>
@@ -72,24 +69,28 @@
     <section class="video-showcase" id="video-demo" aria-labelledby="video-demo-title"><div class="wrap">
       <p class="tag">Contoh Video Tutorial ScholarSnap</p>
       <h2 id="video-demo-title">Dua video tutorial dalam Bahasa Inggris.</h2>
-      <p class="showcase-intro">Dua contoh tutorial dari katalog asli ScholarSnap: Chemistry dan Additional Mathematics untuk Singapore Secondary 4. Video dapat diputar setelah salinan MP4 yang lolos pemeriksaan dipublikasikan.</p>
+      <p class="showcase-intro">Dua contoh tutorial dari katalog asli ScholarSnap: Chemistry dan Additional Mathematics untuk Singapore Secondary 4. Kedua video dapat diputar langsung melalui pemutar atau tautan MP4 pada setiap kartu.</p>
       <div class="video-grid">
         <article class="video-demo-card">
-          <div class="video-demo-media" data-video-path="assets/videos/chemistry-en.mp4" style="--video-image:url('assets/video-tutorial.png')">
-            <div class="video-demo-pending" role="status"><div><strong>Video Kimia belum dipublikasikan</strong><small>Materi original tersimpan di penyimpanan privat ScholarSnap; belum tersedia untuk penonton umum.</small></div></div>
-            <video controls playsinline preload="none" poster="assets/video-tutorial.png" aria-label="Tutorial Chemistry in English"></video>
+          <div class="video-demo-media">
+            <video controls playsinline preload="metadata" poster="assets/video-tutorial.png" aria-label="Tutorial Chemistry in English">
+              <source src="assets/videos/chemistry-en.mp4" type="video/mp4">
+              Browser ini tidak mendukung pemutaran video HTML5. Gunakan tautan MP4 di bawah.
+            </video>
           </div>
-          <div class="video-demo-meta"><div class="video-demo-lang">English · Chemistry · Singapore Secondary 4</div><h3>Acids, Bases, Salts and Neutralisation</h3><p>Contoh visual pembelajaran Kimia berbahasa Inggris dari katalog ScholarSnap.</p></div>
+          <div class="video-demo-meta"><div class="video-demo-lang">English · Chemistry · Singapore Secondary 4</div><h3>Acids, Bases, Salts and Neutralisation</h3><p>Contoh visual pembelajaran Kimia berbahasa Inggris dari katalog ScholarSnap.</p><a class="video-demo-link" href="assets/videos/chemistry-en.mp4" target="_blank" rel="noopener noreferrer" aria-label="Putar video Chemistry dalam Bahasa Inggris">▶ Putar Video Chemistry (MP4)</a></div>
         </article>
         <article class="video-demo-card">
-          <div class="video-demo-media" data-video-path="assets/videos/amath-en.mp4" style="--video-image:url('assets/study-topic.png')">
-            <div class="video-demo-pending" role="status"><div><strong>Video A-Math belum dipublikasikan</strong><small>Materi asli tersimpan di Supabase Storage privat; salinan untuk landing page belum diunggah.</small></div></div>
-            <video controls playsinline preload="none" poster="assets/study-topic.png" aria-label="Additional Mathematics tutorial in English: Quadratic Discriminant and Nature of Roots"></video>
+          <div class="video-demo-media">
+            <video controls playsinline preload="metadata" poster="assets/study-topic.png" aria-label="Additional Mathematics tutorial in English: Quadratic Discriminant and Nature of Roots">
+              <source src="assets/videos/amath-en.mp4" type="video/mp4">
+              Browser ini tidak mendukung pemutaran video HTML5. Gunakan tautan MP4 di bawah.
+            </video>
           </div>
-          <div class="video-demo-meta"><div class="video-demo-lang">English · Additional Mathematics · Singapore Secondary 4</div><h3>Quadratic Discriminant and Nature of Roots</h3><p>Sepuluh adegan pengajaran asli A-Math, membahas diskriminan dan sifat akar persamaan kuadrat.</p></div>
+          <div class="video-demo-meta"><div class="video-demo-lang">English · Additional Mathematics · Singapore Secondary 4</div><h3>Quadratic Discriminant and Nature of Roots</h3><p>Sepuluh adegan pengajaran asli A-Math, membahas diskriminan dan sifat akar persamaan kuadrat.</p><a class="video-demo-link" href="assets/videos/amath-en.mp4" target="_blank" rel="noopener noreferrer" aria-label="Putar video Additional Mathematics dalam Bahasa Inggris">▶ Putar Video A-Math (MP4)</a></div>
         </article>
       </div>
-      <p class="video-disclaimer">Video demo akan memutar kompilasi 10 adegan pembelajaran per topik, tanpa segmen kuis serta jawaban bercabang. File asli harus diverifikasi dan diizinkan untuk publikasi. Ketersediaan video dalam aplikasi mengikuti tahapan pengujian.</p>
+      <p class="video-disclaimer">Setiap video demo merupakan kompilasi 10 adegan pembelajaran asli yang telah diverifikasi, tanpa segmen kuis serta jawaban bercabang. Ketersediaan video dalam aplikasi tetap mengikuti tahapan pengujian.</p>
     </div></section>
 
     <section class="soft"><div class="wrap"><div class="proof reverse"><div class="media-stage"><div class="triptych"><div class="shot-wrap"><div class="screenshot"><img src="assets/practice-config.png" width="423" height="667" alt="Pengaturan latihan soal dari pitch deck" loading="lazy"></div><span>Atur latihan</span></div><div class="shot-wrap"><div class="screenshot"><img src="assets/practice-question.png" width="447" height="710" alt="Pengerjaan soal dari pitch deck" loading="lazy"></div><span>Kerjakan soal</span></div><div class="shot-wrap"><div class="screenshot"><img src="assets/practice-review.png" width="295" height="433" alt="Visual pelajar meninjau pembahasan soal dari pitch deck" loading="lazy"></div><span>Tinjau hasil</span></div></div><p class="imgcaption">Visual sesuai materi slide 10; tampilan dan ketersediaan mengikuti status pengembangan.</p></div><div class="proof-copy"><span class="mini-label">02 / Latihan Soal</span><h2>Berlatih dengan pembahasan yang membantu.</h2><p>Latihan disusun menurut kurikulum, jenjang, mata pelajaran, dan topik. Hasil latihan membantu siswa melihat bagian yang perlu dipahami kembali.</p><ul class="bulletlist"><li>Pilihan ganda, esai, logika, dan kombinasi</li><li>Koreksi, penjelasan, dan evaluasi setelah latihan</li><li>Jord dapat membantu menjelaskan konsep yang belum dipahami</li><li>Konten mengacu pada kurikulum, silabus, dan referensi past paper</li></ul></div></div></div></section>
@@ -102,22 +103,5 @@
   </main>
   <footer class="footer"><div class="wrap footer-grid"><a href="#beranda" class="wordmark">Scholar<span>Snap</span></a><p>© 2026 ScholarSnap · From Learning Today to Creating Tomorrow</p><p>Indonesia &amp; Singapura · Pre-launch</p></div></footer>
 
-  <script>
-    // Progressive enhancement: do not show an unusable player or access private storage.
-    for (const slot of document.querySelectorAll('[data-video-path]')) {
-      const path = slot.getAttribute('data-video-path');
-      fetch(path, { method: 'HEAD', cache: 'no-store' })
-        .then(response => {
-          if (!response.ok || !(response.headers.get('content-type') || '').includes('video/')) return;
-          const player = slot.querySelector('video');
-          const source = document.createElement('source');
-          source.src = path;
-          source.type = 'video/mp4';
-          player.appendChild(source);
-          slot.classList.add('ready');
-        })
-        .catch(() => {});
-    }
-  </script>
 </body>
 </html>
